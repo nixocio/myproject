@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-  const apiBasePath = window.REACT_APP_SETTINGS.API_BASE_PATH;
+  const apiBasePath = window.AppSettings.API_BASE_PATH || '/fallback';
 
   return <h1>API Base Path is: {apiBasePath}</h1>;
 };

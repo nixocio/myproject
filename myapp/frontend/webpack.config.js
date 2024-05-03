@@ -1,11 +1,11 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
-    output: {
+  output: {
     path: path.resolve(__dirname, '../myapp/static'),
     filename: 'bundle.js',
+    // publicPath: process.env.API_BASE_PATH || '/',
   },
   module: {
     rules: [
@@ -21,5 +21,7 @@ module.exports = {
       }
     ]
   },
-  mode: 'development'
+  mode: 'production',
+  // Disable source maps
+  devtool: false
 };
